@@ -8,7 +8,7 @@ Le groupe utilise [une page meetup](https://www.meetup.com/CppMtl/) pour annonce
 
 Ce dépôt sert à regrouper le matériel qui est présenté lors des rencontres. Vous pouvez y trouver les archives des présentations antérieures et les présentateurs des prochaines rencontres seront invités à y partager leur matériel.
 
-Pour échanger avec d'autres membres de C++ Montréal, vous pouvez rejoindre le [canal de discussion](http://cpplang.diegostamigni.com/). [Cliquez ici pour solliciter une invitation](http://cpplang.diegostamigni.com/).
+Pour échanger avec d'autres membres de C++ Montréal, vous pouvez rejoindre le [canal de discussion](https://cpplang.slack.com/messages/CppMtl/). [Cliquez ici pour solliciter une invitation](http://cpplang.diegostamigni.com/).
 
 -----
 
@@ -20,4 +20,4 @@ The group announces its events on [a meetup page](https://www.meetup.com/CppMtl/
 
 This repository is the location where presentation material is published. It is an archive for the previous meetups and the upcoming speakers will be asked to share their slides here.
 
-To chat with other C++ Montréal members, you can join the [chatroom](http://cpplang.diegostamigni.com/). [Click here to request an invitation](http://cpplang.diegostamigni.com/).
+To chat with other C++ Montréal members, you can join the [chatroom](https://cpplang.slack.com/messages/CppMtl/). [Click here to request an invitation](http://cpplang.diegostamigni.com/).
