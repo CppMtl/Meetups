@@ -1,7 +1,9 @@
 ## Accès WiFi
 
 Réseau : MSFT_GUEST
+
 Guest Username : Sofiane.Hocine@microsoft.com
+
 Guest Password : 5633
 
 ## Prototype compiler
