@@ -1,3 +1,5 @@
+[Skip straight to the English description](#english)
+
 Au mois de juin 2017, Herb Sutter a publié une proposition d'évolution du langage : les métaclasses. La proposition comporte de nombreux exemples d'application du mécanisme qui enrichissent considérablement le langage. Non seulement cette proposition est-elle très emballante, elle est également accompagnée d'une version expérimentale de clang qui permet d'expérimenter concrètement avec ces idées. L'objectif de cet atelier est d'expérimenter avec cette proposition et d'échanger des idées d'applications pratiques. LES MÉTACLASSES NE SONT PAS UN STANDARD ET IL N'Y A PAS DE GARANTIE QU'ELLES LE SERONT SOUS CETTE FORME OU UNE AUTRE. À CE STADE, C'EST EXPÉRIMENTAL.
 
 Il y a plusieurs étapes de préparation qui vous permettront de profiter au maximum de l'atelier : 
@@ -27,6 +29,8 @@ Pour l'installer, il faut d'abord installer Node.js, et ensuite il suffit d'invo
 5- Ajouter, au besoin, un paramètre de compilation supplémentaire dans les `options`. Par exemple, sur mon Mac, j'ai dû ajouter le SDK de macOS avec le paramètre : -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/usr/include 
 
 -----
+
+## English
 
 In June 2017, Herb Sutter has submitted a proposal for a new language evolution feature : metaclasses. The proposal is filled with examples demonstrating the applications of this feature, considerably enriching the language. This proposal is not only very exciting on its own, it is also accompanied by an experimental version of the clang compiler which allows us to toy with this feature and experiment those ideas. The objective of the workshop is to experiment with metaclasses and share ideas amongst ourselves. METACLASSES AREN'T A STANDARD AND THERE IS NO GUARANTEE THEY'LL BECOME ONE UNDER THE CURRENT FORM OR ANOTHER. AT THIS POINT, IT IS ONLY EXPERIMENTAL. 
 
