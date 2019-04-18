@@ -1,12 +1,14 @@
 cmake_minimum_required(VERSION 3.12)
 
+find_package(Threads)
+
 add_executable(AsyncButton)
 set_property(TARGET AsyncButton PROPERTY CXX_STANDARD 17)
 target_include_directories(AsyncButton PRIVATE
 	external
 	include
 )
-target_link_libraries(AsyncButton PRIVATE AsyncSystem)
+target_link_libraries(AsyncButton PRIVATE AsyncSystem Threads::Threads)
 target_sources(AsyncButton PRIVATE
 	${CMAKE_CURRENT_SOURCE_DIR}/external/catch.hpp
 	${CMAKE_CURRENT_SOURCE_DIR}/include/AsyncButton.h

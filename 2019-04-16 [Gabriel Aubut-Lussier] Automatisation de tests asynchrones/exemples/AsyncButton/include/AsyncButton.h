@@ -2,6 +2,7 @@
 #define ASYNC_BUTTON_H
 
 #include <chrono>
+#include <functional>
 #include <variant>
 
 struct MouseClick {};
