@@ -2,6 +2,7 @@
 #define AsyncSystem_hpp
 
 #include <algorithm>
+#include <functional>
 #include <deque>
 #include <thread>
 #include "VariableCondition.hpp"
