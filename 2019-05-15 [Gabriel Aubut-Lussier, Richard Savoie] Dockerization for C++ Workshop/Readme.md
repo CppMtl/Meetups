@@ -152,6 +152,6 @@ In order to cross-compile to other systems, you may use the existing Linux and W
 
 ## 5. More ideas
 
-# Derive a new toolchain container from dockcross which includes dependencies of a fictive project (make sure one of those dependencies is not up to date). Then, create a feature branch on git to update said library and resolve any "breaking changes". Then merge back into master. Finally, you can experience a `git bisect` where the revisions before and after the dependency change compile without any complications.
-# Lookup "Docker in docker". Try the following on a linux system : `docker run --rm -it -v /usr/bin/docker:/usr/bin/docker -v /var/run/docker.sock:/var/run/docker.sock bash`
-# Have a look at Kubernetes
+* Derive a new toolchain container from dockcross which includes dependencies of a fictive project (make sure one of those dependencies is not up to date). Then, create a feature branch on git to update said library and resolve any "breaking changes". Then merge back into master. Finally, you can experience a `git bisect` where the revisions before and after the dependency change compile without any complications.
+* Lookup "Docker in docker". Try the following on a linux system : `docker run --rm -it -v /usr/bin/docker:/usr/bin/docker -v /var/run/docker.sock:/var/run/docker.sock bash`
+* Have a look at Kubernetes
