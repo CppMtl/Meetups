@@ -144,32 +144,14 @@ exit
 By now, you have learned how a toolchain container can be created and used to compile applications. You should understand how this enables reproducible builds and how easy setting up a development environment can become. You have also seen how to dockerize a sample application built with that toolchain and then execute it.
 
 
-## 4. Cross-compiling to macOS
+## 4. Cross-compiling to other systems
 
 Docker toolchain containers are extremely useful to make reproducible builds throughout your git history. Cross-compiling from linux to other OSes is another way to make sure all of your builds can be dockerized. Let's try compiling a macOS binary.
 
-### 4.1. If you are using Docker for mac, you need to allow /Applications to be mounted by docker by configuring it in Docker -> Preferences... -> File Sharing.
+In order to cross-compile to other systems, you may use the existing Linux and Windows cross-compilers from the dockcross project. Try compiling a Hello World application for Windows. In order to cross-compile for macOS, things are more complicated because of Apple's licenses. First, you need Apple hardware, and then you can try looking into [osxcross](https://github.com/tpoechtrager/osxcross.git).
 
+## 5. More ideas
 
-### 4.2. Create a vanilla ubuntu system :
-
-`docker run -it -v /Applications:/Applications ubuntu`
-
-
-### 4.3. Install some required tools :
-
-```
-apt-get update
-apt-get install git vim
-git clone https://github.com/tpoechtrager/osxcross.git
-```
-
-
-
-Idées de démonstration lors du Workshop :
-
-Deux services distincts basés sur deux versions différentes de Boost (démontrer l'isolation du toolchain)
-Historique git contient les anciennes configurations (deux versions différentes de boost dans un autre contexte)
-Créer un conteneur FROM scratch
-	Découverte des dépendances avec ldd
-	Découverte des dépendances avec LD_DEBUG (libc gethostbyname)
+# Derive a new toolchain container from dockcross which includes dependencies of a fictive project (make sure one of those dependencies is not up to date). Then, create a feature branch on git to update said library and resolve any "breaking changes". Then merge back into master. Finally, you can experience a `git bisect` where the revisions before and after the dependency change compile without any complications.
+# Lookup "Docker in docker". Try the following on a linux system : `docker run --rm -it -v /usr/bin/docker:/usr/bin/docker -v /var/run/docker.sock:/var/run/docker.sock bash`
+# Have a look at Kubernetes
