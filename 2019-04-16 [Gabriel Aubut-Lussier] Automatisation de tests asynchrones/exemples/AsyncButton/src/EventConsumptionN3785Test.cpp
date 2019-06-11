@@ -1,12 +1,13 @@
 #include "AsyncButton.h"
 #include "AsyncSystemTestRig.hpp"
+#include "AsyncSystemN3785.hpp"
 #include "catch.hpp"
 #include <thread>
 
-SCENARIO("A button can be clicked (async 2)", "[button]")
+SCENARIO("A button can be clicked (event consumption with N3785)", "[button]")
 {
 	GIVEN("An ordinary button") {
-		AsyncSystemTestRig<Button> b;
+		AsyncSystemTestRig<Button, AsyncSystemN3785> b;
 		
 		WHEN("it is clicked") {
 			b.Apply(MouseClick{});

@@ -7,8 +7,8 @@
 #include "VariableCondition.hpp"
 #include <vector>
 
-template <typename T>
-class AsyncSystemTestRig : public AsyncSystem<T>
+template <typename T, template <typename> typename AsyncSystemType = AsyncSystem>
+class AsyncSystemTestRig
 {
 public:
 	using Action = typename T::Action;
@@ -16,12 +16,13 @@ public:
 	
 public:
 	AsyncSystemTestRig()
-	: AsyncSystem<T>{std::bind(&AsyncSystemTestRig::Consume, this, std::placeholders::_1)}
+	: asyncSystem{std::bind(&AsyncSystemTestRig::Consume, this, std::placeholders::_1)}
 	{}
 	
-	~AsyncSystemTestRig()
+	template <typename Action>
+	void Apply(Action&& a)
 	{
-		this->InterruptAndWait();
+		asyncSystem.Apply(std::forward<Action>(a));
 	}
 	
 	template <typename E>
@@ -63,6 +64,7 @@ private:
 	
 private:
 	VariableCondition<std::vector<Event>> eventQueue;
+	AsyncSystemType<T> asyncSystem;
 };
 
 #endif

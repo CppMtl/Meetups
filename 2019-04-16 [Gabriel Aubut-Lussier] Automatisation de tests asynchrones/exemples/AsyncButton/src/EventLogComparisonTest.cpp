@@ -4,7 +4,7 @@
 #include <future>
 #include <thread>
 
-SCENARIO("A button can be clicked (async 1)", "[button]")
+SCENARIO("A button can be clicked (event log comparison)", "[button]")
 {
 	GIVEN("An ordinary button") {
 		std::vector<Button::Event> evenements;

@@ -18,9 +18,11 @@ target_sources(AsyncButton PRIVATE
 	${CMAKE_CURRENT_SOURCE_DIR}/src/ButtonControlledMissileSystem.cpp
 	${CMAKE_CURRENT_SOURCE_DIR}/src/main.cpp
 	${CMAKE_CURRENT_SOURCE_DIR}/src/SyncTests.cpp
-	${CMAKE_CURRENT_SOURCE_DIR}/src/AsyncTests1.cpp
-	${CMAKE_CURRENT_SOURCE_DIR}/src/AsyncTests2.cpp
-	${CMAKE_CURRENT_SOURCE_DIR}/src/AsyncTests3.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/src/EventLogComparisonTest.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/src/EventConsumptionTest.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/src/EventConsumptionN3785Test.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/src/EventConsumptionP0443Test.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/src/EventAggregationTest.cpp
 )
 if (APPLE)
 	target_compile_options(AsyncButton PRIVATE "-mmacosx-version-min=10.14")

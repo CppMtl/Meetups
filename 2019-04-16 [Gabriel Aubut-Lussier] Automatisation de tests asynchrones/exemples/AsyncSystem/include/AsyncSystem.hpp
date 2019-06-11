@@ -7,7 +7,6 @@
 #include <thread>
 #include "VariableCondition.hpp"
 #include <variant>
-#include <vector>
 
 template <typename T>
 class AsyncSystem
