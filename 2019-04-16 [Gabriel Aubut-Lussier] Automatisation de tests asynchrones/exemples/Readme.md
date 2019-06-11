@@ -20,9 +20,11 @@ Il y a deux cibles dans le projet : AsyncButton et AsyncSystem. AsyncButton est 
 - AsyncSystem
   - src
     - AsyncButton.cpp
-    - AsyncTests1.cpp
-    - AsyncTests2.cpp
-    - AsyncTests3.cpp
+    - EventLogComparisonTest.cpp
+    - EventConsumptionTest.cpp
+    - EventConsumptionN3785Test.cpp
+    - EventConsumptionP0443Test.cpp
+    - EventAggregationTest.cpp
     - ButtonControlledMissileSystem.cpp
     - main.cpp
     - SyncTests.cpp
@@ -30,5 +32,7 @@ Il y a deux cibles dans le projet : AsyncButton et AsyncSystem. AsyncButton est 
 - AsyncSystemTestRig
   - include
     - AsyncSystem.hpp
+    - AsyncSystemN3785.hpp
+    - AsyncSystemP0443.hpp
     - AsyncSystemTestRig.hpp
     - VariableCondition.hpp
