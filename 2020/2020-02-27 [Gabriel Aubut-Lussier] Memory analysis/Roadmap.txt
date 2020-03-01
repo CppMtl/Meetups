@@ -1,0 +1,58 @@
+docker run --rm -it ubuntu
+ls /proc
+ls /proc/1
+	bash
+cat /proc/1/stack
+docker run --privileged --rm -it ubuntu
+cat /proc/1/stack
+less /proc/1/smaps
+apt-get install less
+less /proc/1/maps
+	Virtual memory
+	Different binary sections
+	Different permissions
+	[heap]
+	Shared libraries (libc, terminfo, dynamic linker)
+	Anonymous zones
+	[stack]
+	[vvar], [vdso], [vsyscall]
+less /proc/1/smaps
+	Rss
+	Pss
+	Shared_*
+	Private_*
+	VmFlags
+less /proc/1/smaps_rollup
+less /proc/1/map_files/*
+less /proc/1/oom_score
+less /proc/1/status
+	Vm*
+pushd /home/01-programme-vide
+	g++ main.cpp -o 01
+	gdb 01
+		break _exit
+		run
+	ps -a | grep 01
+	less /proc/<pid>/maps
+popd
+pushd /home/02-programme-new
+	g++ main.cpp -o 02
+	gdb 02
+		break _exit
+		run
+	ps -a | grep 02
+	less /proc/<pid>/maps
+	Arena
+popd
+pushd /home/03-gros-new
+	g++ main.cpp -o 03 -g
+	gdb 03
+		break f
+		run
+		finish
+	ps -a | grep 03
+	less /proc/<pid>/maps
+	Zone anonyme
+popd
+strace -e brk -k
+strace -e mmap -k
